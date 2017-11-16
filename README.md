@@ -37,6 +37,7 @@
 *	设置`android:clipToPadding="false"`，上拉时listview才会覆盖padding的空间
 
 ```
+    // ---> fragment_content.xml
     <android.support.v7.widget.RecyclerView
         android:id="@+id/DataListView"
         android:layout_width="match_parent"
@@ -51,7 +52,7 @@
     @Override
     public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
         super.onScrolled(recyclerView, dx, dy);
-		//移动总距离大于规定距离 并且是显示状态就隐藏
+        //移动总距离大于规定距离 并且是显示状态就隐藏
         if (scrolledDistance > hideThreshold && controlsVisible) {
             onHide();
             controlsVisible = false;
@@ -61,7 +62,7 @@
             controlsVisible = true;
             scrolledDistance = 0;
         }
-		//显示状态向上滑动 或 隐藏状态向下滑动 总距离增加
+        //显示状态向上滑动 或 隐藏状态向下滑动 总距离增加
         if ((controlsVisible && dy > 0) || (!controlsVisible && dy < 0)) { 
             scrolledDistance += dy;
         }
@@ -75,7 +76,7 @@
             return;
         }
         ObjectAnimator animator = ObjectAnimator.ofFloat(secondNavigationBar, 
-			View.TRANSLATION_Y, 0, -secondNavigationBarHeight);
+            View.TRANSLATION_Y, 0, -secondNavigationBarHeight);
         animator.setDuration(ANIMATOR_SPEED);
         animator.start();
     }
@@ -85,7 +86,7 @@
             return;
         }
         ObjectAnimator animator = ObjectAnimator.ofFloat(secondNavigationBar, 
-			View.TRANSLATION_Y, -secondNavigationBarHeight, 0);
+            View.TRANSLATION_Y, -secondNavigationBarHeight, 0);
         animator.setDuration(ANIMATOR_SPEED);
         animator.start();
     }
