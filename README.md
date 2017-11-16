@@ -7,7 +7,7 @@
 实现过程
 ---
 
-####第一层Toolbar的隐藏
+**第一层Toolbar的隐藏**
 
 使用的是AppBarLayout的layout_scrollFlags属性及layout_behavior属性的配合
 ```xml
@@ -28,7 +28,7 @@
 		app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 ```
 
-####第二层Toolbar的隐藏
+**第二层Toolbar的隐藏**
 
 通过OnScrollListener来实现，上拉到一定高度，给第二层Toolbar添加属性动画隐藏掉
 
