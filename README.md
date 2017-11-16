@@ -12,20 +12,20 @@
 使用的是AppBarLayout的layout_scrollFlags属性及layout_behavior属性的配合
 ```xml
     // ---> activity_main.xml
-	<android.support.design.widget.AppBarLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		app:elevation="0dp"
-		app:layout_scrollFlags="scroll|enterAlways">
-			...
-		</android.support.design.widget.TabLayout>
-	</android.support.design.widget.AppBarLayout>
-	
-	<FrameLayout
-		android:id="@+id/content_layout"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        app:layout_scrollFlags="scroll|enterAlways">
+            ...
+        </android.support.design.widget.TabLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 ```
 
 **第二层Toolbar的隐藏**
